@@ -1,96 +1,87 @@
 body {
-    font-family: sans-serif;
-    background-color: #f762bb8e;
-  }
+  font-family: sans-serif;
+  background-color: #f762bb8e;
+}
 
-  h1 {
-    font-size: 3em;
-    color: #8b61ff;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    width: 300px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .sim {
-    background-color: #009900;
-    color: #ffffff;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nao {
-    background-color: #ff0000;
-    color: #ffffff;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .sim:hover {
-    box-shadow: 0 0 10px #009900;
-  }
-  
-  .nao:hover {
-    transform: translate(-20px, 0);
-  }
-  
-  .nao:active {
-    background-color: #ff0000;
-    color: #ffffff;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px;
-    transform: translate(0px, 100px);
-    transition: 0.5s;
-  }
-  
-  .nao:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ff0000;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  
-  .nao:hover:after {
-    opacity: 1;
-  }
-  
-  .nao:active:after {
-    opacity: 0;
-  }
-  
-  .nao:active {
-    pointer-events: none;
-  }
-  
-  .nao:active {
-    display: none;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
+h1 {
+  font-size: 3em;
+  color: #8b61ff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sim {
+  background-color: #009900;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nao {
+  background-color: #ff0000;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sim:hover {
+  box-shadow: 0 0 10px #009900;
+}
+
+.nao:hover {
+  transform: translate(-20px, 0);
+}
+
+.nao:active {
+  background-color: #ff0000;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  transform: none;
+  transition: 0.5s;
+  z-index: 99;
+  display: block;
+}
+
+.nao:active {
+  content: "Sim";
+  display: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.sim:active {
+  transform: translate(0px, 0);
+}
